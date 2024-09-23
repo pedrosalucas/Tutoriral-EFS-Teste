@@ -1,8 +1,5 @@
 # Tutoriral-EFS-Teste
-Tutorial de teste do serviço de Elastic File System da AWS.
-Explicar o tutorial
-
-### Referências
+Esse tutorial tem o objetivo de realizar o passo a passo de criar uma instância EC2, instalr o EFS nessa instância e disponibilizar testes práticos para testar as características do serviço EFS.
 
 ## Criar EFS
 
@@ -36,6 +33,9 @@ Adicione a regra que permite que qualquer IPV4 possa acessar as máquinas usando
 <img src="https://github.com/user-attachments/assets/9a5242ff-0fb6-4ae2-9963-7068ed57acc5" width="800">
 
 ## Criar máquinas EC2
+### Referência 
+https://www.youtube.com/watch?v=UIbZOjXAJ6U
+
 Nessa etapa vamos apenas configurar caracteristicas obrigatórias para a criação da instância EC2.
 Vamos precisar de duas instâncas, então repita o processo para criar mais intâncias quando necessário.
 
@@ -92,4 +92,23 @@ Por fim, podemos ver o armazenamento do EFS conectado basta executar o comando `
 
 ## Testar EFS
 ### Disponibilidade
+
+Dentro do terminal do EC2, entre na pasta do EFS usando o comando ```cd efs```, depois crie um arquivo de texto ```sudo nano hello.txt```, e insira no arquivo um texto. Para sair do editor basta usar o comando "ctrl + x", depois digitar "y" e por fim teclar "enter".
+
+![image](https://github.com/user-attachments/assets/445f4446-ffb9-4399-a9e1-c5a800db503d)
+
+
+Agora você pode ver o arquivo executando o comando ```ls```, e usando o comando ```cat hello.txt``` pode ver o conteudo do arquivo.
+
+![image](https://github.com/user-attachments/assets/97b3bbd1-6e01-4df8-9145-b8b369b5900c)
+
+Agora entre na outra instância EC2, garanta que o mesmo EFS está instalado nela. E você pode entrar na pasta "efs" e rodar o comando ```cat hello.txt``` para ver o arquivo gerado na outra instância.
+O caminho reverso também acontece, você pode criar um arquivo na segunda instância e acessar na primeira e todas as modificações irã replicar.
+
 ### Escalabilidade
+Você pode seguir a postagem da Amazon que realiza testes de performace na criação de arquivos em EC2, usando o EFS.
+https://aws.amazon.com/pt/blogs/storage/how-to-test-drive-amazon-elastic-file-system/
+
+### Repositório de tutoriais do EFS
+A amazon possui um repositório completo com tutoriais de como usar o EFS em diversas situações.
+https://github.com/aws-samples/amazon-efs-tutorial/
