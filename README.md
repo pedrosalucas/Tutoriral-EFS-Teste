@@ -33,10 +33,32 @@ Ao entrar no grupo, clique em "Editar regras de entrada".
 
 Adicione a regra que permite que qualquer IPV4 possa acessar as máquinas usando o protocolo NFS.
 
-<img src="https://github.com/user-attachments/assets/3ca00477-cb55-4958-8a62-8facacf99f16" width="400">
+<img src="https://github.com/user-attachments/assets/3ca00477-cb55-4958-8a62-8facacf99f16" width="800">
 
 
 ## Criar máquinas EC2
+Nessa etapa vamos apenas configurar caracteristicas obrigatórias para a criação da instância EC2.
+Vamos precisar de duas instâncas, então repita o processo para criar mais intâncias quando necessário.
+
+No painel do EC2, clique no botão "Executar instância".
+
+<img src="https://github.com/user-attachments/assets/0b7b8243-3201-495f-9a45-2984484cc12e" width="400">
+
+Nomei a sua instância.
+
+<img src="https://github.com/user-attachments/assets/64848a8b-4966-4f8b-aad7-6abb9361e292" width="550">
+
+Selecione o par de chaves. Nessa etapa selecionei para prosseguir sem um par de chaves, mas sinta-se livre para selecionar outra opção.
+
+<img src="https://github.com/user-attachments/assets/daadd075-033b-481e-a36f-29652307c2c6" width="500">
+
+Verifique se nas configurações de Rede se está permitido o acesso através de SSH à instância.
+
+<img src="https://github.com/user-attachments/assets/c438cfc4-cea0-4e91-9208-1612db02d63a" width="450">
+
+E por fim, clique em "Executar instância".
+
+<img src="https://github.com/user-attachments/assets/8480d165-e8aa-4788-9620-e3fcb57a0e52" width="300">
 
 ## Configurar EFS no EC2
 
