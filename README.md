@@ -33,8 +33,7 @@ Ao entrar no grupo, clique em "Editar regras de entrada".
 
 Adicione a regra que permite que qualquer IPV4 possa acessar as máquinas usando o protocolo NFS.
 
-<img src="https://github.com/user-attachments/assets/3ca00477-cb55-4958-8a62-8facacf99f16" width="800">
-
+<img src="https://github.com/user-attachments/assets/9a5242ff-0fb6-4ae2-9963-7068ed57acc5" width="800">
 
 ## Criar máquinas EC2
 Nessa etapa vamos apenas configurar caracteristicas obrigatórias para a criação da instância EC2.
@@ -61,6 +60,35 @@ E por fim, clique em "Executar instância".
 <img src="https://github.com/user-attachments/assets/8480d165-e8aa-4788-9620-e3fcb57a0e52" width="300">
 
 ## Configurar EFS no EC2
+
+No painel das instâncias EC2, selecione a instância que será configurada e clique em "Conectar".
+
+<img src="https://github.com/user-attachments/assets/fc75b67e-e7c1-444a-b06b-44858cd7efb3" width="700">
+
+Ao fim da página clique em "Conectar" novamente.
+
+<img src="https://github.com/user-attachments/assets/fdbb95f9-9f7c-4467-b1d1-d0f93a04d795" width="500">
+
+Agora você terá acesso ao terminal da máquina EC2.
+
+<img src="https://github.com/user-attachments/assets/7a0a32a3-a481-498f-a1ac-a2d070cfadc9" width="500">
+
+
+Execute o comando a seguir, para instalar a biblioteca de feramentas do EFS, e crie uma pasta nomeada de 'efs'. 
+```
+sudo yum install -y amazon-efs-utils
+
+mkdir efs
+```
+
+Vá até a página do EFS que criamos anteriormente, clique em "Anexar" e copie o comando que conecta o sistema de arquivos usando o NFS. Com o comando, execute no terminal do EC2 para conectar com o EFS.
+
+<img src="https://github.com/user-attachments/assets/5a681467-a7ce-4d7f-b2d2-5df954f8b10f" width="800">
+
+
+Por fim, podemos ver o armazenamento do EFS conectado basta executar o comando ```df  -h```.
+
+![image](https://github.com/user-attachments/assets/b80325e4-1834-44d4-b62b-99d6b5ef3425)
 
 ## Testar EFS
 ### Disponibilidade
