@@ -33,8 +33,8 @@ Adicione a regra que permite que qualquer IPV4 possa acessar as máquinas usando
 <img src="https://github.com/user-attachments/assets/9a5242ff-0fb6-4ae2-9963-7068ed57acc5" width="800">
 
 ## Criar máquinas EC2
-### Referência 
-https://www.youtube.com/watch?v=UIbZOjXAJ6U
+### Referência
+<a href="https://www.youtube.com/watch?v=UIbZOjXAJ6U" target="_blank">Elástico e Totalmente Escalável: Amazon EFS</a>
 
 Nessa etapa vamos apenas configurar caracteristicas obrigatórias para a criação da instância EC2.
 Vamos precisar de duas instâncas, então repita o processo para criar mais intâncias quando necessário.
@@ -106,9 +106,7 @@ Agora entre na outra instância EC2, garanta que o mesmo EFS está instalado nel
 O caminho reverso também acontece, você pode criar um arquivo na segunda instância e acessar na primeira e todas as modificações irã replicar.
 
 ### Escalabilidade
-Você pode seguir a postagem da Amazon que realiza testes de performace na criação de arquivos em EC2, usando o EFS.
-https://aws.amazon.com/pt/blogs/storage/how-to-test-drive-amazon-elastic-file-system/
+Você pode seguir a postagem da Amazon que realiza testes de performace na criação de arquivos em EC2, usando o EFS. <a href="https://aws.amazon.com/pt/blogs/storage/how-to-test-drive-amazon-elastic-file-system/" target="_blank">How to test drive Amazon Elastic File System</a>
 
 ### Repositório de tutoriais do EFS
-A amazon possui um repositório completo com tutoriais de como usar o EFS em diversas situações.
-https://github.com/aws-samples/amazon-efs-tutorial/
+A amazon possui um repositório completo com tutoriais de como usar o EFS em diversas situações. <a href="https://github.com/aws-samples/amazon-efs-tutorial/" target="_blank">Amazon EFS Tutorial</a>
